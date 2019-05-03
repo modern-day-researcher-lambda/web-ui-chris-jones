@@ -135,23 +135,29 @@ body {
   height: 100%;
   font-family: 'Economica', sans-serif;
   font-weight: 500;
-  font-style: norma;
+  font-style: normal;
 }
-/*** MY LESS CODE BEGINS HERE ***/
+/*** MY CODE BEGINS HERE ***/
 /*** Variables ***/
-.myFont {
-  font-family: 'Economica', sans-serif;
-  font-weight: 500;
-  font-style: norma;
-}
 /*** Mixins ***/
 .border {
   border-top: solid 6px #573305;
+}
+/*** main styles are below ***/
+.myFont {
+  font-family: 'Economica', sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 .header-flex {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
 }
 .make-responsive {
   width: 100%;
@@ -164,10 +170,6 @@ a {
 a a:hover {
   color: #6D6D6D;
 }
-.fab {
-  color: #573305;
-  font-size: 2.5rem;
-}
 strong {
   font-weight: bold;
 }
@@ -179,28 +181,28 @@ h1 {
   font-size: 33px;
   font-family: 'Economica', sans-serif;
   color: #573305;
+  padding-left: 15px;
 }
-.me {
-  border-radius: 50%;
-  padding-bottom: 25px;
-  width: 100%;
-  height: auto;
-  min-width: 175px;
+.ico {
+  color: #fff;
 }
-nav {
-  border-top: solid 6px #573305;
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px;
-  background-color: #eee;
-  align-items: center;
+.nav {
+  background: none;
 }
 nav a {
-  color: #0c0c0c;
+  color: #e4e4e4;
   text-decoration: none;
   padding-left: 20px;
   text-align: center;
   padding: 14px;
+}
+.fixed-nav-bar {
+  border-top: solid 6px #573305;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.377);
 }
 nav a:hover {
   text-decoration: overline;
@@ -212,13 +214,25 @@ nav a:hover {
   left: 0;
   z-index: 9999;
   width: 100%;
-  height: 50px;
-  background-color: #eee;
+  height: 64px;
+}
+.navUl {
+  text-transform: uppercase;
+  display: flex;
+}
+.branding {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.branding h1 {
+  color: #6D6D6D;
+  font-size: 3rem;
 }
 .container {
   width: 65%;
   padding: 25px;
-  padding-top: 54px;
+  padding-top: 50px;
   margin: 0 auto;
 }
 header {
@@ -235,6 +249,7 @@ header {
 }
 .header-text {
   padding: 20px;
+  display: block-flex flex;
 }
 .header-h1 {
   font-size: 200px;
@@ -244,63 +259,38 @@ header {
 .header-p {
   color: #6D6D6D;
   font-size: 40px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.btn-row {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 .header-btn {
+  color: #fff !important;
   text-transform: uppercase;
-  background: #fff;
-  padding: 10px;
+  background: none;
+  padding: 10px 55px;
+  border: 2px solid #fff !important;
   border-radius: 2px;
-  display: inline-block;
-  border: none;
+  margin-left: 45px;
 }
 .header-btn:hover {
-  background: #573305;
-  letter-spacing: 2px;
-  color: #fff;
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
-  transition: all 0.4s ease 0s;
-  border: none;
+  color: #494949 !important;
+  background: #fff;
+  border-color: #fff !important;
+  transition: all 0.5s ease 0s;
 }
 .main {
   display: flex;
   justify-content: space-around;
 }
 .intro {
-  width: 50%;
   margin: none;
-  padding-right: 25px;
   margin-bottom: 100px;
-}
-.skills {
-  width: 50%;
-  padding: 0;
-}
-progress {
-  border: none;
-  width: 100%;
-  height: 20px;
-  background: crimson;
-  margin-bottom: 10px;
-}
-progress::-webkit-progress-value {
-  background: #573305;
-}
-progress::-moz-progress-bar {
   background: #6D6D6D;
-}
-section.work {
-  margin-bottom: 100px;
-}
-table,
-th,
-td {
-  border: 1px solid #6D6D6D;
-  border-collapse: collapse;
-  padding: 15px;
-  text-align: left;
-  border-spacing: 5px;
 }
 .contact {
   /* Style the submit button with a specific background color etc */
@@ -349,4 +339,14 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media only screen and (max-width: 500px) {
+  .header-h1 {
+    font-size: 45px;
+    justify-content: center;
+    align-content: center;
+  }
+  .header-p {
+    font-size: 25px;
+  }
 }
