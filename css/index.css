@@ -1,0 +1,352 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-family: 'Economica', sans-serif;
+  font-weight: 500;
+  font-style: norma;
+}
+/*** MY LESS CODE BEGINS HERE ***/
+/*** Variables ***/
+.myFont {
+  font-family: 'Economica', sans-serif;
+  font-weight: 500;
+  font-style: norma;
+}
+/*** Mixins ***/
+.border {
+  border-top: solid 6px #573305;
+}
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.make-responsive {
+  width: 100%;
+  height: auto;
+  min-width: 175px;
+}
+a {
+  color: #573305;
+}
+a a:hover {
+  color: #6D6D6D;
+}
+.fab {
+  color: #573305;
+  font-size: 2.5rem;
+}
+strong {
+  font-weight: bold;
+}
+p {
+  padding-bottom: 10px;
+  font-size: 24px;
+}
+h1 {
+  font-size: 33px;
+  font-family: 'Economica', sans-serif;
+  color: #573305;
+}
+.me {
+  border-radius: 50%;
+  padding-bottom: 25px;
+  width: 100%;
+  height: auto;
+  min-width: 175px;
+}
+nav {
+  border-top: solid 6px #573305;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: #eee;
+  align-items: center;
+}
+nav a {
+  color: #0c0c0c;
+  text-decoration: none;
+  padding-left: 20px;
+  text-align: center;
+  padding: 14px;
+}
+nav a:hover {
+  text-decoration: overline;
+  color: #573305;
+}
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+  background-color: #eee;
+}
+.container {
+  width: 65%;
+  padding: 25px;
+  padding-top: 54px;
+  margin: 0 auto;
+}
+header {
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: url("/img/bookBg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.header-text {
+  padding: 20px;
+}
+.header-h1 {
+  font-size: 200px;
+  color: #fff;
+  text-shadow: 4px 4px 8px #000000;
+}
+.header-p {
+  color: #6D6D6D;
+  font-size: 40px;
+}
+.header-btn {
+  text-transform: uppercase;
+  background: #fff;
+  padding: 10px;
+  border-radius: 2px;
+  display: inline-block;
+  border: none;
+}
+.header-btn:hover {
+  background: #573305;
+  letter-spacing: 2px;
+  color: #fff;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+  border: none;
+}
+.main {
+  display: flex;
+  justify-content: space-around;
+}
+.intro {
+  width: 50%;
+  margin: none;
+  padding-right: 25px;
+  margin-bottom: 100px;
+}
+.skills {
+  width: 50%;
+  padding: 0;
+}
+progress {
+  border: none;
+  width: 100%;
+  height: 20px;
+  background: crimson;
+  margin-bottom: 10px;
+}
+progress::-webkit-progress-value {
+  background: #573305;
+}
+progress::-moz-progress-bar {
+  background: #6D6D6D;
+}
+section.work {
+  margin-bottom: 100px;
+}
+table,
+th,
+td {
+  border: 1px solid #6D6D6D;
+  border-collapse: collapse;
+  padding: 15px;
+  text-align: left;
+  border-spacing: 5px;
+}
+.contact {
+  /* Style the submit button with a specific background color etc */
+  /* When moving the mouse over the submit button, add my secondary-color */
+}
+.contact input[type=text],
+.contact select,
+.contact textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #6D6D6D;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */;
+}
+.contact input[type=submit] {
+  background-color: #573305;
+  color: white;
+  padding: 12px 20px;
+  margin-bottom: 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.contact input[type=submit]:hover {
+  background-color: #6D6D6D;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #573305;
+  color: #fff;
+}
+@media (max-width: 500px) {
+  padding: 10px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

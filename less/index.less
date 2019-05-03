@@ -1,0 +1,431 @@
+// Is this working?
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+	box-sizing: border-box;
+}
+
+
+
+
+
+html,
+body {
+	height: 100%;
+	.myFont; //here I used font stack variable
+
+}
+
+
+/*** MY LESS CODE BEGINS HERE ***/
+
+/*** Variables ***/
+@main-color: rgb(87, 51, 5);
+@secondary-color: #6D6D6D;
+@nav-link-color: rgb(12, 12, 12);
+
+
+
+
+.myFont {
+	font-family: 'Economica', sans-serif;
+	font-weight: 500;
+	font-style: norma;
+}
+
+
+/*** Mixins ***/
+.border {
+	border-top: solid 6px @main-color;
+}
+
+.header-flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.make-responsive {
+	width: 100%;
+	height: auto;
+	min-width: 175px;
+}
+
+//Normal CSS
+a {
+	color: @main-color;
+
+	a:hover {
+		color: @secondary-color;
+	}
+
+	//Here i used nesting for my link styles
+}
+
+
+
+.fab {
+	color: @main-color;
+	font-size: 2.5rem;
+}
+
+strong {
+	font-weight: bold;
+}
+
+p {
+	padding-bottom: 10px;
+	font-size: 24px;
+}
+
+h1 {
+	font-size: 33px;
+	font-family: 'Economica', sans-serif;
+	color: @main-color;
+}
+
+.me {
+	border-radius: 50%;
+	padding-bottom: 25px;
+	.make-responsive();
+
+}
+
+nav {
+	.border(); //here I used my mixin
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px;
+	background-color: #eee;
+	align-items: center;
+}
+
+nav a {
+	color: @nav-link-color;
+	text-decoration: none;
+	padding-left: 20px;
+	text-align: center;
+	padding: 14px;
+
+}
+
+nav a:hover {
+	text-decoration: overline;
+	color: @main-color;
+}
+
+// sticky nav
+.fixed-nav-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 50px;
+	background-color: #eee;
+	;
+}
+
+.container {
+	width: 65%;
+	padding: 25px;
+	padding-top: 54px;
+	margin: 0 auto;
+}
+
+header {
+	display: flex;
+	height: 100vh;
+	padding: 20px;
+	.header-flex(); // here i made a mixin for the flex properties for the header!
+	background: url("/img/bookBg.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+
+}
+
+.header-text {
+	padding: 20px;
+}
+
+.header-h1 {
+	font-size: 200px;
+	color: #fff;
+	text-shadow: 4px 4px 8px #000000;
+}
+
+.header-p {
+	color: @secondary-color;
+	font-size: 40px;
+}
+
+.header-btn {
+	text-transform: uppercase;
+	background: #fff;
+	padding: 10px;
+	border-radius: 2px;
+	display: inline-block;
+	border: none;
+
+}
+
+.header-btn:hover {
+	background: @main-color;
+	letter-spacing: 2px;
+	color: #fff;
+	-webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+	-moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+	box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+	transition: all 0.4s ease 0s;
+	border: none;
+
+}
+
+.main {
+	display: flex;
+	justify-content: space-around;
+
+}
+
+.intro {
+	width: 50%;
+	margin: none;
+	padding-right: 25px;
+	margin-bottom: 100px;
+
+}
+
+.skills {
+	width: 50%;
+	padding: 0;
+}
+
+// Start Progress Bar Styles
+progress {
+	border: none;
+	width: 100%;
+	height: 20px;
+	background: crimson;
+	margin-bottom: 10px;
+}
+
+progress::-webkit-progress-value {
+	background: @main-color;
+}
+
+progress::-moz-progress-bar {
+	background: @secondary-color;
+}
+
+// End Progress bar Styles
+
+
+section.work {
+	margin-bottom: 100px;
+}
+
+table,
+th,
+td {
+	border: 1px solid @secondary-color;
+	border-collapse: collapse;
+	padding: 15px;
+	text-align: left;
+	border-spacing: 5px;
+}
+
+
+.contact {
+
+	input[type=text],
+	select,
+	textarea {
+		width: 100%;
+		/* Full width */
+		padding: 12px;
+		/* Some padding */
+		border: 1px solid @secondary-color;
+		/* Gray border */
+		border-radius: 4px;
+		/* Rounded borders */
+		box-sizing: border-box;
+		/* Make sure that padding and width stays in place */
+		margin-top: 6px;
+		/* Add a top margin */
+		margin-bottom: 16px;
+		/* Bottom margin */
+		resize: vertical
+			/* Allow the user to vertically resize the textarea (not horizontally) */
+	}
+
+	/* Style the submit button with a specific background color etc */
+	input[type=submit] {
+		background-color: @main-color;
+		color: white;
+		padding: 12px 20px;
+		margin-bottom: 25px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+
+	/* When moving the mouse over the submit button, add my secondary-color */
+	input[type=submit]:hover {
+		background-color: @secondary-color;
+	}
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	background-color: @main-color;
+	color: #fff;
+}
+
+
+//mobile styles
+@media(max-width: 500px) {
+	padding: 10px;
+	margin: 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

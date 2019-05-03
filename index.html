@@ -1,17 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script type="text/javascript" src="/script.js"></script>
-    <script type="text/css" src="/styles.css"></script>
-    <title>- Modern Day Researcher -</title>
+    <meta charset="utf-8">
+
+    <title>Modern Day Researcher</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Economica" rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
 </head>
 
 <body>
-    <h1>Modern Day Researcher</h1>
+
+   
+    <nav class="fixed-nav-bar">
+            <a class="navbar-brand" href="#"><img src="/img/logoicon.ico" width="36px" alt="logo">Modern Day
+                Researcher</a>
+        <a href="#">proposal</a>
+        <a href="#">features</a>
+        <a href="#">team</a>
+        <a href="#">contact</a>
+    </nav>
+
+    <header>
+        <!-- <div class="header-img">
+            <img class="me" src="/img/books.jpg" alt="logo image">
+        </div> -->
+
+        <div class="header-text">
+            <h1 class="header-h1">Research Pal</h1>
+            <p class="header-p">Collect - Organize - Research - Grow</p>
+            <button class="header-btn">Log in</button>
+        </div>
+    </header><!-- end header -->
+
+
+    <div class="container">
+
+        <section class="main">
+            <div class="intro">
+                <h1>Proposal</h1><br><br>
+                <p>Are you doing research for a paper and need a way to keep track of all the papers, books, articles,
+                    etc. that you are using? Or maybe you just need a way to keep track of your ‘to-read’ list with all
+                    of the blog posts, videos, and social media links that you’ve been meaning to read or watch?
+                </p>
+
+                <p>- Enter, Research Pal! This app is a place where all articles, blog posts, and other media items can
+                    be stored, categorized and displayed in a clean and easy-to-use interface.
+                </p>
+
+                <p>- Our goal to help you organize your life. Take that, Marie Kondo!</p>
+            </div><!-- end intro -->
+
+            <div class="skills">
+                <h1>Research</h1><br><br>
+                <img style="width:500px" src="/img/books2.jpg" alt="">
+                <!-- <i class="fab fa-html5"></i>
+                <progress max="100" value="90"></progress><br>
+                <i class="fab fa-css3"></i>
+                <progress max="100" value="80"></progress><br>
+                <i class="fab fa-js-square"></i>
+                <progress max="100" value="50"></progress><br>
+                <i class="fab fa-less"></i>
+                <progress max="100" value="20"></progress><br> -->
+            </div><!-- end skills -->
+
+        </section><!-- end main -->
+
+
+        <section class="work">
+            <h1>Features</h1><br><br>
+            <p>tabs</p>
+        </section><!-- end work -->
+
+        <section class="work">
+            <h1>Team</h1><br><br>
+            <p>The team section here</p>
+        </section><!-- end work -->
+
+
+        <section class="contact">
+            <h1>Contact Us</h1><br><br>
+            <form name="contact" method="POST" data-netlify="true">
+
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <br><br>
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+
+        </section><!-- end contact -->
+        <footer>
+            <p>Copyright &copy; Modern Day Researcher Team 2019</p>
+        </footer><!-- end footer -->
+
+
+
+    </div><!-- end container -->
 </body>
 
 </html>
