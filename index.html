@@ -6,11 +6,14 @@
     <meta charset="utf-8">
 
     <title>Modern Day Researcher</title>
-
+    <!-- javascript -->
+    <script src="script.js"></script>
     <link rel="stylesheet" href="css/index.css">
+
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Economica" rel="stylesheet">
+
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -28,7 +31,7 @@
 
     <nav class="fixed-nav-bar">
         <div class="branding">
-            <i class="ico fas fa-feather-alt"></i>
+            <i class=" ico navIco fas fa-feather-alt"></i>
             <h1>Research Pal</h1>
         </div>
         <ul class="navUl">
@@ -41,45 +44,77 @@
     </nav>
 
     <header>
-        <div class="header-text">
+        <div class="header-text fadeIn">
             <h1 class="header-h1">Research Pal</h1>
             <p class="header-p">Collect - Organize - Research - Grow</p>
             <div class="btn-row">
-                <button class="header-btn">Log in</button>
-                <button class="header-btn">Sign Up</button>
+                <button class="header-btn"><i class="fas fa-user"></i> Log in</button>
+                <button class="signup-btn"><i class="fas fa-pencil-alt"></i> Sign Up</button>
             </div>
     </header><!-- end header -->
 
+
     <div class="intro">
-        <button class="drop-down-btn">Drop Down</button>
-        <div class="drop-down-content">
-            <p>Are you doing research for a paper and need a way to keep track of all the papers, books, articles,
-                etc. that you are using? Or maybe you just need a way to keep track of your ‘to-read’ list with all
-                of the blog posts, videos, and social media links that you’ve been meaning to read or watch?</p>
+        <button onclick="myFunction()" onmouseover="mOver(this)" onmouseout="mOut(this)" class="drop-down-btn">Drop
+            Down</button>
+        <div class="drop-down-content fadeIn">
+            <p class="quote">"Research is to see what everybody else has seen, and to think what nobody else has
+                thought."</p>
 
-            <p> - Enter, Research Pal! This app is a place where all articles, blog posts, and other media items can
-                be stored, categorized and displayed in a clean and easy-to-use interface.</p>
+            <p class="quoteName">-Albert Szent-Gyorgyi</p>
 
-            <p> - Our goal to help you organize your life. Take that, Marie Kondo!</p>
+            <div class="icons">
+                <div class="iconBox">
+                    <h1>Collect</h1>
+                    <i class="ico far fa-save"></i>
+                </div><!-- end iconBox -->
+                <div class="iconBox">
+                    <h1>Organize</h1>
+                    <i class="ico fas fa-sitemap"></i>
+                </div><!-- end iconBox -->
+                <div class="iconBox">
+                    <h1>Research</h1>
+                    <i class="ico fas fa-search"></i>
+                </div><!-- end iconBox -->
+                <div class="iconBox">
+                    <h1>Grow</h1>
+                    <i class="ico fab fa-grav"></i>
+                </div><!-- end iconBox -->
+            </div><!-- end icons -->
         </div><!-- End drop down content -->
 
     </div><!-- end intro -->
     <div class="container">
 
-        <section class="main">
 
-        </section><!-- end main -->
+        <section class="collect">
+            <div class="organize">
 
+                <img class="responsive" src="/img/collect.jpg" alt="">
+                <h1>Collect</h1>
+                <p>Are you doing research for a paper and need a way to keep track of all the papers, books, articles,
+                    etc. that you are using? Or maybe you just need a way to keep track of your ‘to-read’ list with all
+                    of the blog posts, videos, and social media links that you’ve been meaning to read or watch?</p>
 
-        <section class="organize">
-            <h1>Organize</h1><br><br>
-            <p>tabs</p>
-        </section><!-- end work -->
+                <p> - Enter, Research Pal! This app is a place where all articles, blog posts, and other media items can
+                    be stored, categorized and displayed in a clean and easy-to-use interface.</p>
+
+                <p> - Our goal to help you organize your life. Take that, Marie Kondo!</p>
+            </div>
+        </section><!-- end organize -->
 
         <section class="research">
             <h1>Research</h1><br><br>
-            <p>The research section here</p>
-        </section><!-- end work -->
+            <p>- The app will let you enter a title, category, description and link for each item that you want to keep
+                track of. You can then display these as a card set in an easy-to-scan format. You can select a single
+                category, or view everything in either chronological or alphabetical order. You can also do a text
+                search to look for specific words or phrases. When you are done with an item you can mark complete.
+                Finally, a login screen and authentication will keep your data secure from other users.</p>
+            <br>
+            <p> - A future release will add social interaction, with the ability to recommend items to other users and
+                to view the cards of users that you have ‘friended’.
+            </p>
+        </section><!-- end research -->
 
         <section class="team">
             <h1>Team</h1><br><br>
