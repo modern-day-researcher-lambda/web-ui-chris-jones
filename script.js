@@ -1,13 +1,8 @@
-document.querySelector('body > header > div > h1').addEventListener("onload", fadeFunction)
-
+//fadein
 function fadeFunction() {
     $('body').fadeIn(500);
 
 }
-
-
-document.querySelector('body > header').addEventListener()
-
 
 
 //toggle drop down 
@@ -20,6 +15,7 @@ function myFunction() {
     }
 }
 
+
 //mouse over the drop down button
 function mOver(obj) {
     obj.innerHTML = "Drop Down on Click"
@@ -27,4 +23,12 @@ function mOver(obj) {
 
 function mOut(obj) {
     obj.innerHTML = "Mouse Over Me"
+}
+
+
+
+//objects
+let teamMember1 = {
+    name: "Chris Jones",
+    role: "User Interface",
 }

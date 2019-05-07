@@ -1,4 +1,3 @@
-// Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -140,29 +139,39 @@ table {
 	box-sizing: border-box;
 }
 
-
-
-
+//importing less files
+@import '/Tabs.less';
 
 html,
 body {
 	height: 100%;
-	// background-color: @secondary-color;
 	.myFont; //here I used font stack variable
-
+	scroll-behavior: smooth;
 }
-
 
 /*** MY CODE BEGINS HERE ***/
 
 /*** Variables ***/
 @main-color: rgb(87, 51, 5);
-@secondary-color: #6D6D6D;
+@secondary-color: #6d6d6d;
 @nav-link-color: rgb(228, 228, 228);
 
 /*** Mixins ***/
 .border {
 	border-top: solid 6px @main-color;
+}
+
+.header-flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+}
+
+.buttonShadow {
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	-moz-box-shadow: 0 8px 6px -6px black;
+	box-shadow: 0 8px 6px -6px black;
 }
 
 /*** main styles are below ***/
@@ -172,31 +181,17 @@ body {
 	font-style: normal;
 }
 
-.buttonShadow {
-	-webkit-box-shadow: 0 8px 6px -6px black;
-	-moz-box-shadow: 0 8px 6px -6px black;
-	box-shadow: 0 8px 6px -6px black;
-}
-
-.header-flex {
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-}
-
 .responsive {
-	width: 200px;
-	height: 200px;
-	margin-bottom: 100px;
+	width: 180px;
+	height: 180px;
+	margin: 35px;
 	border-radius: 50%;
+	border: solid 6px @main-color;
 }
 
-.make-responsive {
-	width: 100%;
-	height: auto;
-	min-width: 175px;
+.cellPhone {
+	height: 400px;
 }
-
 
 //Normal CSS
 a {
@@ -205,7 +200,6 @@ a {
 	a:hover {
 		color: @secondary-color;
 	}
-
 	//Here i used nesting for my link styles
 }
 
@@ -223,6 +217,8 @@ h1 {
 	font-family: 'Economica', sans-serif;
 	color: @main-color;
 }
+
+//Nav styles
 
 .navIco {
 	text-shadow: 5px 5px 4px #000;
@@ -256,6 +252,7 @@ nav a:hover {
 	z-index: 9999;
 	width: 100%;
 	height: 64px;
+	.buttonShadow();
 }
 
 .navUl {
@@ -268,7 +265,6 @@ nav a:hover {
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-
 }
 
 .branding h1 {
@@ -277,19 +273,16 @@ nav a:hover {
 	padding-left: 15px;
 }
 
-
-
 //main styles
 
 .container {
 	width: 65%;
 	padding: 25px;
-	padding-top: 50px;
+	padding-top: 100px;
 	margin: 0 auto;
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 6%, 0 100%);
-	clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
 }
 
+//header
 //fade in for the header and drop-down-content
 .fadeIn {
 	opacity: 0;
@@ -299,7 +292,7 @@ nav a:hover {
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
-		transform: translateY(50px);
+		transform: translateY(80px);
 	}
 
 	30% {
@@ -312,8 +305,6 @@ nav a:hover {
 	}
 }
 
-
-
 header {
 	display: flex;
 	height: 100vh;
@@ -324,14 +315,11 @@ header {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-
 }
 
 .header-text {
 	padding: 20px;
-	display: block-flex flex;
-
-
+	display: flex;
 }
 
 .header-h1 {
@@ -346,6 +334,7 @@ header {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 25px;
+	text-shadow: 4px 4px 8px #000000;
 }
 
 .btn-row {
@@ -363,7 +352,6 @@ header {
 	border-radius: 2px;
 	margin-left: 45px;
 	.buttonShadow();
-
 }
 
 .header-btn:hover {
@@ -385,13 +373,12 @@ header {
 	.buttonShadow();
 }
 
+//drop down content
 .intro {
 	width: 100%;
-	margin-bottom: 100px;
 	background: @secondary-color;
 	background-image: linear-gradient(@secondary-color, white);
 	padding-top: 25px;
-
 }
 
 .drop-down-btn {
@@ -415,7 +402,6 @@ header {
 	margin: 0 auto;
 	padding: 25px;
 	display: none;
-
 }
 
 .quote {
@@ -428,59 +414,231 @@ header {
 	padding-right: 100px;
 	color: @main-color;
 	font-size: 2rem;
-
 }
 
 .icons {
+	// height: 200px;
 	display: flex;
 	justify-content: space-around;
 	padding: 25px;
 	margin: 25px;
-	margin-top: 100px;
+	margin: auto;
 	border-top: 1px solid @nav-link-color;
 }
 
 .iconBox {
-
-	// border: 1px solid white;
-	padding: 25px;
-
+	text-align: center;
 }
-
 
 .ico {
 	margin-top: 20px;
 	font-size: 85px;
 	color: @main-color;
-
 }
 
-.collect {
-	background: red;
-}
-
-.organize {
+//features section
+.features-content {
+	text-align: center;
+	font-size: 45px;
+	padding-top: 100px;
+	padding: 10px;
 	width: 75%;
-	margin-bottom: 100px;
+	margin: auto;
+	margin-bottom: 25px;
+
+	.features-content p {
+		margin-bottom: 25px;
+	}
+
+	.features-h1 {
+		margin-bottom: 45px;
+	}
+
+	.features-content-h2 {
+		margin: 100px 0 10px 0;
+	}
 }
 
-.organize p {
-	margin-bottom: 25px;
+//tabs component
+
+tabs-main {
+	// display: flex;
+	// justify-content: center;
+	flex-flow: column;
+}
+
+.activePanel {
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+}
+.collect-p {
+	margin-left: 65px;
+	margin-bottom: 200px;
+	display: flex;
+}
+
+.orgImg {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	padding-top: 35px;
+	vertical-align: middle;
+}
+
+//research section
+.slopedDiv {
+	.buttonShadow();
+	background-color: @secondary-color;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
 }
 
 .research {
-	width: 75%;
+	width: 85%;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+	background-color: @secondary-color;
+	padding-top: 100px;
+	margin-bottom: 100px;
 }
 
-// section.work {
-// 	margin-bottom: 100px;
-// }
+.research h1 {
+	color: white;
+}
 
+.research ol {
+	color: @main-color;
+	padding-left: 25px;
+	text-shadow: 0 3px 2px #000;
+}
+
+.research-content {
+	text-align: center;
+	// padding: 100px;
+	font-size: 4em;
+	margin-bottom: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.mainH1 {
+	font-size: 4rem;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 65px;
+}
+
+//slider section
+.slider {
+	padding: 100px;
+}
+
+//filler section with parallax background
+.filler {
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	perspective: 2px;
+	display: flex;
+
+	.filler-content {
+		position: relative;
+		height: 75vh;
+		width: 100vw;
+		padding: 200px 0 200px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		// background-color: rgba(0, 0, 0, 0.445);
+		// background-position: cover;
+		// text-shadow: 0 0 5px #000;
+	}
+
+	.lambda {
+		// height: 100vh;
+		width: 100%;
+		max-width: 400px;
+		height: auto;
+		width: 485px;
+	}
+
+	.filler-h1 {
+		color: white;
+		font-size: 45px;
+		margin-bottom: 25px;
+	}
+
+	.filler-btnDiv {
+		display: flex;
+		align-items: center;
+		width: 100px;
+		margin: auto 0;
+	}
+
+	.parallax::after {
+		content: " ";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		transform: translateX(-1px) scale(1.5);
+		background-size: 100%;
+		z-index: -1;
+	}
+
+	.bg1::after {
+		background-image: linear-gradient(@main-color, @secondary-color, transparent), url(/img/typeWriter.jpg);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+}
+
+//team section here
+.team {
+	padding-top: 100px;
+}
+.team-container {
+	display: flex;
+	padding: 35px;
+	justify-content: center;
+	flex-flow: row wrap;
+}
+
+.team-p {
+	width: 500px;
+	margin: auto;
+	font-size: 300px;
+}
+
+.team-box {
+	background-color: @nav-link-color;
+
+	width: 400px;
+	margin: 35px;
+	padding: 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	.buttonShadow();
+}
+
+.team-box img {
+	margin: auto;
+}
+
+.github {
+	font-size: 25px;
+}
+
+//contact section
 .contact {
-
 	input[type=text],
 	select,
 	textarea {
@@ -498,10 +656,9 @@ header {
 		/* Add a top margin */
 		margin-bottom: 16px;
 		/* Bottom margin */
-		resize: vertical
-			/* Allow the user to vertically resize the textarea (not horizontally) */
+		resize: vertical;
+		/* Allow the user to vertically resize the textarea (not horizontally) */
 	}
-
 
 	/* Style the submit button with a specific background color etc */
 	input[type=submit] {
@@ -527,19 +684,37 @@ footer {
 	color: #fff;
 }
 
-
 //mobile styles
-@media(max-width: 500px) {
+
+//media query for 1000px
+@media only screen and (max-width: 1000px) {
+	.container {
+		width: 100%;
+	}
+}
+
+//media query for 800px
+@media only screen and (max-width: 800px) {
+	.header-h1 {
+		text-align: center;
+	}
+
+	.drop-down-content {
+		width: 85%;
+		margin: 0 auto;
+		padding: 25px;
+		display: none;
+	}
+}
+
+//media query for 500px
+@media (max-width: 500px) {
 	padding: 10px;
 	margin: 0px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
-
 }
-
-
 
 @media only screen and (max-width: 500px) {
 	.header-h1 {
