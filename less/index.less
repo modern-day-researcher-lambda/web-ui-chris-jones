@@ -261,6 +261,10 @@ nav a:hover {
 	font-size: 1.5em; // using responsive units for font sizing
 }
 
+.icon {
+	display: none;
+}
+
 .branding {
 	display: flex;
 	align-items: center;
@@ -323,6 +327,7 @@ header {
 }
 
 .header-h1 {
+	text-align: center;
 	font-size: 200px;
 	color: #fff;
 	text-shadow: 4px 4px 8px #000000;
@@ -695,6 +700,13 @@ footer {
 
 //media query for 800px
 @media only screen and (max-width: 800px) {
+	.icon {
+		display: block;
+	}
+
+	.branding h1 {
+		font-size: 32px;
+	}
 	.header-h1 {
 		text-align: center;
 	}
@@ -703,6 +715,15 @@ footer {
 		width: 85%;
 		margin: 0 auto;
 		padding: 25px;
+		display: none;
+	}
+
+	.topnav {
+		overflow: hidden;
+		position: relative;
+	}
+
+	.navUl {
 		display: none;
 	}
 }
