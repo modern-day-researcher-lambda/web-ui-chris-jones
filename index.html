@@ -1,0 +1,299 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modern Day Researcher</title>
+   <!-- css styles -->
+   <link rel="stylesheet" href="css/index.css">
+   
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Economica" rel="stylesheet">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+    <nav class="fixed-nav-bar">
+        <div class="branding">
+            <i class="ico navIco fas fa-feather-alt"></i>
+            <h1>Research Pal</h1>
+        </div>
+        <ul class="navUl">
+            <li><a href="#features">features</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#team">team</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#form">contact</a></li>
+        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+    </nav><!-- end fixed-nav-bar -->
+
+
+    <!-- the header is a big splash page taking up the full view height of the window -->
+    <header>
+        <div class="header-text header-flex fadeIn">
+            <h1 class="header-h1">Research Pal</h1>
+            <p class="header-p">Collect - Organize - Research - Grow</p>
+            <div class="btn-row">
+                
+                <!-- header buttons -->
+                <a href="https://research-pal.netlify.com/" target="_blank"><button class="header-btn"><i class="fas fa-user"></i> Log in</button></a>
+
+                <a href="https://research-pal.netlify.com/" target="_blank">
+                    <button class="signup-btn"><i class="fas fa-pencil-alt"></i> Sign Up</button>
+                </a>    
+            </div>
+    </header><!-- end header -->
+
+
+    <!-- Intro is a drop down menu containing a nice quote, and some icons for visual appeal -->
+    <div class="intro"> 
+        <button onclick="myFunction()" onmouseover="mOver(this)" onmouseout="mOut(this)" class="drop-down-btn">Drop Down</button>
+        <div class="drop-down-content fadeIn">
+            <p class="quote">"Research is to see what everybody else has seen, and to think what nobody else has
+            thought."</p>
+            <p class="quoteName">-Albert Szent-Gyorgyi</p>
+
+            <div class="icons">
+                <div class="iconBox">
+                    <h1>Collect</h1>
+                    <i class="ico far fa-save"></i>
+                </div><!-- end iconBox -->
+
+                <div class="iconBox">
+                    <h1>Organize</h1>
+                    <i class="ico fas fa-sitemap"></i>
+                </div><!-- end iconBox -->
+
+                <div class="iconBox">
+                    <h1>Research</h1>
+                    <i class="ico fas fa-search"></i>
+                </div><!-- end iconBox -->
+                
+                <div class="iconBox">
+                    <h1>Grow</h1>
+                    <i class="ico fab fa-grav"></i>
+                </div><!-- end iconBox -->
+            </div><!-- end icons -->
+        </div><!-- End drop down content -->
+    </div><!-- end intro -->
+
+
+    <!-- The Features section contains a nice tabbed section -->
+    <div class="features container" id="features">
+        <h1 class="mainH1">Features</h1><br>
+        <div class="features-content">
+            <p>We all want to be able to do research without having to think about it, right? That's the dream.</p>
+            <p>A place to store and filter all the different research articles and blog posts can make it a reality.</p>
+            <h2 class="features-content-h2">Enter Research Pal</h2>
+            <p>Some of the features are below:</p>
+        </div><!-- end features-content -->
+        
+        
+        <section class="collect">
+            <div id="tabstrip">
+                <span>Collect</span>
+                <span>Organize</span>
+                <span>Research</span>
+                <span>Grow</span>
+
+                <div class="tabsMain"><!-- collect tab starts here -->
+                    <img src="/img/collect.jpg" class="responsive" alt="">                     
+                    <div class="collect-tab-content">
+                        <h1>Collect</h1>
+                        <p>Keeping track of all the articles and blog posts you want to read while doing research for a paper, thesis or book can be tough.</p>
+                    </div><!-- end collect-tab-content -->           
+                </div><!-- end collect -->
+                    
+                 <div><!-- organize tab starts here -->
+                    <img src="/img/collect.jpg" class="responsive" alt="">
+                    <div class ="organize-tab-content">
+                        <h1>Organize</h1>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by
+                        their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic
+                        life One day however a small line of blind text by the name of Lorem Ipsum decided to</p>    
+                    </div><!-- end organize-tab-content -->
+                </div><!-- end organize tab -->
+
+                <div>
+                    <img src="/img/collect.jpg" class="responsive" alt="">
+                    
+                    <div class="research-tab-component">
+                        <h1>Research</h1>
+                        <p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt
+                        fox. Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim. Sex-charged fop blew my junk TV quiz. How quickly daft jumping zebras vex. Two driven jocks help fax my big quiz. Quick, Baz, get
+                        my woven flax jodhpurs! "Now fax quiz Jack! " my brave</p>  
+                    </div><!-- end research-tab-component --> 
+                </div>
+
+                <div>
+                    <img src="/img/collect.jpg" class="responsive" alt="">
+                    <div class="grow-tabs-component">
+                        <h1 class="features-h1">Grow</h1>
+                        <p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt
+                        fox. Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim. Sex-charged fop blew my junk TV quiz. How quickly daft jumping zebras vex. Two driven jocks help fax my big quiz. Quick, Baz, get
+                        my woven flax jodhpurs! "Now fax quiz Jack! " my brave</p>   
+                    </div>
+                         
+                </div>
+            </div><!-- end tab-strip-->
+        </section><!-- end collect -->
+   </div><!-- end features container -->
+
+
+    <div class="sloped-background" id="about">
+        <div class="slopedDiv">
+            <section class="research">
+                <h1 class="mainH1">About the App</h1>
+                <div class="research-content">
+                    <img class="cellPhone" src="/img/cellPhone.png" alt="cellphone">
+                    <ol>
+                        <li>Collect</li>
+                        <li>Organize</li>
+                        <li>Research</li>
+                        <li>Grow</li>
+                    </ol>
+                </div><!-- end research content -->
+                <div class="research">
+                        <h1>Research Pal</h1><br>
+                        <p>- The app will let you enter a title, category, description and link for each item that you want to keep
+                        track of. You can then display these as a card set in an easy-to-scan format. You can select a single                    category, or view everything in either chronological or alphabetical order. You can also do a text
+                        search to look for specific words or phrases. When you are done with an item you can mark complete.
+                        Finally, a login screen and authentication will keep your data secure from other users.</p>
+                        <br>
+                        <p> - A future release will add social interaction, with the ability to recommend items to other users and
+                        to view the cards of users that you have ‘friended’.
+                        </p>
+                </div>
+                
+            </section><!-- end research -->
+        </div><!-- end slopedDiv -->
+    </div><!-- end sloped-background-->
+
+    <div class="slider">
+        <h1>This is the Slider Title</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam perspiciatis ea fugit deserunt et amet mollitia aliquam dignissimos consequuntur. Nobis nam debitis vero tempore dicta incidunt! Ad hic adipisci debitis facilis dicta id, maxime sapiente accusamus distinctio, atque repellat earum odit praesentium provident nihil nisi inventore quidem officiis? Perferendis atque dignissimos nulla nihil sed facere dolor quod sequi, iste quaerat!</p>
+    </div><!-- end slider -->
+
+
+    <div class="filler bg1">
+        <div class=" filler-content parallax bg1">
+            <div class="parallax bg1">
+                <img class="lambda" src="/img/lambdaLogo.png" alt="">
+                <h1 class="filler-h1">Everything I learned about code I learned at Lambda School</h1>
+                <a href="https://lambdaschool.com/apply/" target="_blank"><button class="header-btn"><i class="fas fa-lambda"></i>Apply Now</button></a>
+               
+                
+            </div>
+        </div><!-- end filler-content -->
+    </div><!-- end filler -->
+    
+    
+    <div id="team">
+        <section class="team">
+            <h1 class=mainH1>The Team</h1>
+            <div class="team-p">
+                <p>It was a pleasure working with my fellow class mates to make this app happen</p>
+            </div>
+            <div class="team-container">
+                <div class="team-box">
+                    <h1>Chris Jones</h1><br>
+                   <img class="responsive" src="/img/Chris1.jpg" alt="team member"><br>
+                    <h3>User Interface</h3> <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dignissimos corporis aut esse dolores sint!</p>
+                    <br>
+                    <i class="github fab fa-github"></i>
+                </div><!-- end team-box -->
+                        
+                <div class="team-box">
+                    <h1>Kurt Van Etten</h1><br>
+                    <img class="responsive" src="/img/kurt.png" alt="team member"><br>
+                    <h3>Frontend Developer</h3> <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dignissimos corporis aut esse dolores sint!</p>
+                    <br>
+                    <i class="github fab fa-github"></i>
+                </div><!-- end team-box -->
+
+                <div class="team-box">
+                    <h1>David Vazquez</h1><br>
+                    <img class="responsive" src="/img/daveV.jpg" alt="team member"><br>
+                    <h3>User Interface</h3> <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dignissimos corporis aut esse dolores sint!</p>
+                    <br>
+                    <i class="github github fab fa-github"></i>
+                </div><!-- end team-box -->
+
+                <div class="team-box">
+                    <h1>David Aceves</h1><br>
+                    <img class="responsive" src="/img/david.jpg" alt="team member"><br>
+                     <h3>Frontend Developer</h3> <br>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dignissimos corporis aut esse dolores sint!</p>
+                     <br>
+                     <i class="github fab fa-github"></i>
+                </div><!-- end team-box -->
+
+                <div class="team-box">
+                    <h1>Eric Hendrix</h1><br>
+                    <img class="responsive" src="/img/eric.jpg" alt="team member"><br>
+                    <h3>User Interface</h3> <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dignissimos corporis aut esse dolores sint!</p>
+                    <br>
+                    <i class="github fab fa-github"></i>
+                </div><!-- end team-box -->
+                        
+                <div class="team-box">
+                    <h1>Andrey Yurlov</h1><br>
+                    <img class="responsive" src="/img/andrew.png" alt="team member"><br>
+                    <h3>Backend Development</h3> <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dignissimos corporis aut esse dolores sint!</p>
+                    <br>
+                    <i class="github fab fa-github"></i>
+                </div><!-- end team-box -->      
+            </div><!-- end team-container-->
+        </section><!-- end team section -->
+    </div><!-- end team container -->
+    
+    
+
+    <div class="contact container" id="form">
+                
+                <section class="contact">
+                    <h1 class="mainH1">Contact Us</h1><br><br>
+                    <form name="contact" method="POST" data-netlify="true">
+        
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <br><br>
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        
+                        <input type="submit" value="Submit">
+        
+                </section><!-- end contact -->
+                <footer>
+                    <p>Copyright &copy; Modern Day Researcher Team 2019</p>
+                </footer><!-- end footer -->
+    </div><!-- end contact container -->  
+</body>
+
+
+
+<!-- javascript -->
+    <script src="script.js"></script>
+    <script src="Tabs.js"></script>
+
+</html>
